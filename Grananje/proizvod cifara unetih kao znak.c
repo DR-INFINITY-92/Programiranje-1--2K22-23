@@ -20,10 +20,14 @@ int main()
     }
     if(i!=0)
         goto p;
-    if(br==0)
-        printf("medju unetim znakovima nema cifara");
-    else 
-        printf("proizvod=%d",proizvod);
+    else
+    {
+         if(br==0)
+             printf("medju unetim znakovima nema cifara");
+        else 
+             printf("proizvod=%d",proizvod);
+    }
+   
 
 return 0;
 }

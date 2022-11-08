@@ -2,19 +2,21 @@
 #include<stdlib.h>
 int main()
 {
-    float a,b,c,z=0;
-    printf("unnesi 1. broj\n");
-    scanf("%f",&a);
-    printf("unnesi 2.broj\n");
-    scanf("%f",&b);
-    printf("unnesi 3.broj\n");
-    scanf("%f",&c);
-    if(a>0)
-        z=a;
-    if(b>0)
-        z=z+b;
-    if(c>0)
-        z=z+c;
-    printf("zbir je%.2f\n",z);
+    int s,m;
+    p:
+    printf("unesi broj sati i broj minuta\n");
+    scanf("%d",&s);
+    scanf("%d",&m);
+    if(s<0 || s>23 || m<0 || m>59)
+        {   
+                    printf("neispravan unos vremena unesi opet\n");
+                    goto p;
+        }
+    else
+    {
+        int pv;
+        pv=24*60-(s*60+m);
+        printf("do ponoci ima %d sati i %d minuta",pv/60,pv%60);
+    }
     return 0;
 }

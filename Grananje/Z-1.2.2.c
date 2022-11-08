@@ -8,5 +8,5 @@ int main()
     if(x<0)
         printf("apsolutna vrednost broja x je = %.2f",(-1)*x);
     else
-        printf("apsolutna vrednost broja x je = %.4f",x);
+        printf("apsolutna vrednost broja x je = %.2f",x);
 }

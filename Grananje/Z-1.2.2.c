@@ -9,4 +9,5 @@ int main()
         printf("apsolutna vrednost broja x je = %.2f",(-1)*x);
     else
         printf("apsolutna vrednost broja x je = %.2f",x);
+    return 0;
 }

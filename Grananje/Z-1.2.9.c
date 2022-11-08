@@ -27,7 +27,5 @@ int main()
         else 
              printf("proizvod=%d",proizvod);
     }
-   
-
 return 0;
 }

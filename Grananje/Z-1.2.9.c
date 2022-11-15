@@ -5,7 +5,7 @@ int main()
     char x;
     int broj,proizvod=1,br=3,i=3;
     p:
-    printf("unesi celi broj\n");
+    printf("unesi znak\n");
     scanf(" %c",&x);
     if(x>=48 && x<=57)
     {

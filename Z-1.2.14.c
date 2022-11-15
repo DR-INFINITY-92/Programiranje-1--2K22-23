@@ -34,4 +34,5 @@ int main()
         }   
     }
     printf("%d",k);
+    return 0;
 }

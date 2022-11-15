@@ -21,14 +21,38 @@ int main()
             rezultat=x*y;
             break;
         case '/':
-            rezultat=1.0*x/y;
-            break;
+            if(y==0)
+            {
+                printf("sa nulom se ne deli unesite opet brojeve\n");
+                goto p;
+            }
+            else
+            {
+                rezultat=1.0*x/y;
+                break;
+            }
         case '|':
-            rezultat=x/y;
-            break;
+            if(y==0)
+            {
+                printf("sa nulom se ne deli unesite opet brojeve\n");
+                goto p;
+            }
+            else
+            {
+                rezultat=x/y;
+                break;
+            }
         case '%':
-            rezultat=x%y;
-            break;
+            if(y==0)
+            {
+                printf("sa nulom se ne deli unesite opet brojeve\n");
+                goto p;
+            }
+            else
+            {
+                rezultat=x%y;
+                break;
+            }
         default:
             printf("uneli ste nepostojecu operaciju unesite opet\n");
             goto p;

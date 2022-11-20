@@ -13,6 +13,5 @@ int main()
     }
     else
         printf("reciprocna vrednost broja x je = %.4f",1/x);
-    
     return 0;
 }

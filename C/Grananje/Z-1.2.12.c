@@ -16,7 +16,6 @@ int main() {
         goto p;
     }
     k=n;
-
   /* Izdvajanje cifara broja n. */
     j=n%10;
     n=n/10;

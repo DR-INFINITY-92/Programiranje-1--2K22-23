@@ -9,10 +9,10 @@ int main()
         if (a<b && a<c)
             min = a;
         else
-        if (b < a && b<c)
-            min = b;
-        else
-            min=c;
+            if (b < a && b<c)
+                min = b;
+            else
+                min=c;
     printf("Najmanji broj je: %d\n",min);
   return 0;
 }

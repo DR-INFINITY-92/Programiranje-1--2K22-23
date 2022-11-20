@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
-int main() {
+#include <stdlib.h>int main() {
     int n,j,d,s,h,max;
     p:
     printf("Unesite cetvorocifreni broj:\n");

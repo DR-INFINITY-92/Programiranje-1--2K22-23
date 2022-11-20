@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>int main() {
+#include <stdlib.h>
+int main() 
+{
     int n,j,d,s,h,max;
     p:
     printf("Unesite cetvorocifreni broj:\n");
@@ -31,7 +33,7 @@
                 max=d;
             else
                 max=j;
-  /* Ispis rezultata. */
+
   printf("Najveca cifra unetog broja n je: %d\n", max);
   return 0;
 }

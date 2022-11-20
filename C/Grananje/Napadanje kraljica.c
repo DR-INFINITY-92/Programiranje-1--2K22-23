@@ -6,7 +6,7 @@ int main()
 {
 	int x1,y1,x2,y2;
 	p:
-	printf("unesi x i y koordinatu prve dame\n");
+	printf("unesi x i y kooordinatu prve dame\n");
 	scanf("%d%d",&x1,&y1);
 	printf("unesi x i y koordinatu druge dame\n");
 	scanf("%d%d",&x2,&y2);

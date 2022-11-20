@@ -13,7 +13,7 @@ int main() {
     printf("Greska: neispravan unos cene.");
     goto p;
   }
-  
+
   /* Racunanje bez popusta.*/
   cena_bez_popusta=c1+c2+c3;
 

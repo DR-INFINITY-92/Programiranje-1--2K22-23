@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int i,n;
+	float s=0;
+	printf("unesi ceo broj\n");
+	scanf("%d",&n);
+	for(i=3;i<=3*n;i=i+3)
+		s=s+1.0/i;
+	printf("suma je%.2f ",s);
+	return 0;
+}

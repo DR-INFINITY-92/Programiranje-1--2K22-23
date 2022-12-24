@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int i,n,j,s=0,f=1;
+	printf("unesi ceo broj\n");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			f=f*j;
+		}
+		s=s+f;
+		f=1;
+	}
+	printf("suma je %d ",s);
+	return 0;
+}

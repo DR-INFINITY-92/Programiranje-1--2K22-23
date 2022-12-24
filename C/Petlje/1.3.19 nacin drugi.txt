@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int n,i,indikator=0;
+	float minc,cena;
+	p:
+	printf("unesi koliko imas artikala\n");
+	scanf("%d",&n);
+	if(n<=0)
+	{
+		printf("pogresan unos broj artikala mora biti veci od nule n\n");
+		goto p;
+	}
+	for(i=1;i<=n;i++)
+	{
+		printf("unesi cenu %d. artikla \n",i);
+		scanf("%f",&cena);
+		if(cena<=0)
+		{
+			indikator=1;
+			break;
+		}
+		else
+		{
+			if(i==1)
+			{
+				minc=cena;
+				continue;
+			}
+			if(cena<minc)
+				minc=cena;
+		}
+		
+	}
+	if(indikator==0)
+		printf("najmanja cena od unetih artikala je %.2f",minc);
+	else
+		printf("pogresan unos cena ne moze biti nula ili negativna\n");
+	return 0;
+}

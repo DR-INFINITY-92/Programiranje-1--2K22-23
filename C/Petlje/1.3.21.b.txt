@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int n,i,x,bsnc,bcpb=0,bctb=0,tb,pb;
+	printf("unesi koliko imas brojeva\n");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		printf("unesi celi broj x\n");
+		scanf("%d",&tb);
+		
+		if(i==1)
+		{
+			x=tb;
+			pb=tb;
+			bsnc=tb;
+			while(x!=0)
+			{
+				x=x/10;
+				bctb++;
+			}
+			bcpb=bctb;
+			continue;
+		}
+		else
+		{
+			x=tb;
+			while(x!=0)
+			{
+				x=x/10;
+				bctb++;
+			}
+			if(bctb>bcpb)
+				bsnc=tb;
+			
+			pb=tb;	
+			bcpb=bctb;
+			bctb=0;
+		}
+	}
+	printf("broj sa najvecim brojem cifara je %d",bsnc);
+	return 0;
+}

@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int n,i,x,bsnd,dpb,dtb;
+	printf("unesi koliko imas brojeva\n");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		printf("unesi celi broj x\n");
+		scanf("%d",&x);
+		dtb=(x%100)/10;
+		if(i==1)
+		{
+			dpb=dtb;
+			bsnd=x;
+			continue;
+		}
+		else
+		{
+			if(dtb<dpb)
+				bsnd=x;
+			dpb=dtb;	
+		}
+	}
+	printf("broj sa najmanjom cifrom desetice je %d",bsnd);
+	return 0;
+}

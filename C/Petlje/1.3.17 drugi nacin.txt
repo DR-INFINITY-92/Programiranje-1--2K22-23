@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int i=0;
+	float s=0,cena=1,prosecna_cena;
+	while(cena!=0)
+	{
+		printf("unesi cenu artikla\n");
+		scanf("%f",&cena);
+		if(cena==0)
+			break;
+		else
+		{
+			s=s+cena;
+			i++;
+		}
+	}
+	prosecna_cena=s/i;
+	printf("prosecna cena artikala je %.2f",prosecna_cena);
+	return 0;
+}

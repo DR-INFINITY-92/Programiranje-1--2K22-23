@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int i=1,min_nv,max_nv,nv=1;
+	while(nv!=0)
+	{
+		printf("unesi nadmorsku visinu\n");
+		scanf("%d",&nv);
+		if(i==1)
+		{
+			if(nv==0)
+			{
+				printf("pogresan unos uneso si na pocetku odmah nulu\n");
+				nv=1;
+				continue;
+			}
+			min_nv=nv;
+			max_nv=nv;
+			i++;
+			continue;
+		}
+		if(i==2)
+			if(nv==0)
+			{
+				printf("pogresan unos uneso si nulu za drugu nv\n");
+				nv=1;
+				continue;
+			}
+		i++;
+		if(nv!=0)
+		{
+			if(nv<min_nv)
+				min_nv=nv;
+			if(nv>max_nv)
+				max_nv=nv;
+		}
+	}
+	printf("razlika imzedju maksimalne i minimalne nadomrske visine je %d",max_nv-min_nv);
+	return 0;
+}

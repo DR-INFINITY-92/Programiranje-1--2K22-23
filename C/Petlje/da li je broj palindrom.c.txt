@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int n,c,tc=1,k=0,m,bc=0;
+	p:
+	printf("unesi celi pozitivni broj n\n");
+	scanf("%d",&n);
+	if(n<=0)
+	{
+		printf("greska prilikom unosa\n"); 
+		goto p;
+	}
+	else
+		m=n;
+		while(n!=0)
+		{
+			bc++;
+			n=n/10;
+		}
+		n=m;
+		tc=pow(10,bc-1);
+		while(n!=0)
+		{
+			c=n%10;
+			k=k+c*tc;
+			n=n/10;
+			tc=tc/10;
+		}
+	if(k==m)
+		printf("broj je palindrom");
+	else
+		printf("broj nije palindrom");
+
+	return 0;
+}

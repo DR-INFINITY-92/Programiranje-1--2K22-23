@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() 
+{
+	int n,c,tc=1,k=0,i=1;
+	p:
+	printf("unesi celi pozitivni broj n\n");
+	scanf("%d",&n);
+	if(n<=0)
+	{
+		printf("greska prilikom unosa\n");
+		goto p;
+	}
+	else
+		while(n!=0)
+		{
+			c=n%10;
+			if(i%2!=0)
+			{
+				k=k+c*tc;
+				tc=tc*10;
+			}
+			n=n/10;
+			i++;
+		}
+	printf("novo dobijeni broj k=%d",k);
+	return 0;
+}

@@ -7,17 +7,14 @@ int sve_jednake_cifre(int x)
     x=x/10;
     while((x%10)==c)
         x=x/10;
-    if(x==0)
-        return 1;
-    else 
-        return 0;
+    return x;
 }
 int main ()
 {
     int n;
     printf("unesi celi broj n\n");
     scanf("%d",&n);
-    if(sve_jednake_cifre(n)==1)
+    if(sve_jednake_cifre(n)==0)
         printf("sve cifre broja  %d su jednake ",n);
     else
          printf("u broju %d nisu sve cife jednake",n);

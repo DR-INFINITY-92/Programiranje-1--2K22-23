@@ -1,48 +1,54 @@
-/*Ispitivanje da li je broj armstrongov*/
+/*ispitivanje da li su cifre unetog broja u rastucem ili opadajucem poretku*/
 #include <stdio.h>
 #include <stdlib.h>
-int stepen(int k, int n)
+#include <math.h>
+
+
+int neopadajuce(int x)
 {
-	int j,p=1;
-	for(j=0;j<n;j++)
-		p=p*k;
-	return p;
-}
-int broj_cifara(int n)
-{
-    int b=0;
-    while(n>0)
-    {
-        b++;
-        n=n/10;
-    }
-    return b;
-        
-    
-}
-int armstrong(int n)
-{
-	int m,brc=0,s=0;
-	m=n;
-	brc=broj_cifara(n);
-	while(m>0)
+	int pc,br1=1,bc=1,bjc=1,br2=1;
+	x=abs(x);
+    pc=x%10;
+    x=x/10;
+	while(x>0)
 	{
-		s=s+stepen(m%10,brc);
-		m=m/10;
+		if((x%10)<=pc)
+			br1++;
+		if((x%10)==pc)
+			bjc++;
+		if((x%10)>=pc)
+			br2++;
+		pc=x%10;
+		x=x/10;
+        bc++;
 	}
-	if(n==s)
-		return 1;
+	if(bc==bjc)
+		return 4;
 	else
-		return 0;
+    	if(br1==bc)
+	   		return 1;
+		else
+    		if(br2==bc)    
+        		return 0;
+			else
+				return 2;
 }
 int main() 
 {
-	int i,x,n;
-	printf("unesi broj x\n");
-	scanf("%d",&x);
-	if(armstrong(x)==1)
-		printf("broj %d je armstrongov",x);
-	else
-		printf("broj %d nije armstrongov",x);
-	return 0;
+	int n;
+	printf("unesi ceo broj n\n");
+	scanf("%d",&n);
+
+    if(neopadajuce(n)==1)
+        printf("cifre broja %d, su u reastucem poretku\n",n);
+    else 
+		if(neopadajuce(n)==0)	
+			printf("cifre broja %d, su u opadajucem poretku\n",n);	
+		else
+			if(neopadajuce(n)==4)
+				printf("sve cifre broja %d su jednake",n);
+			else	
+				if(neopadajuce(n)==2)
+					printf("nije ni rastuce ni opadajuce");
+    return 0;
 }

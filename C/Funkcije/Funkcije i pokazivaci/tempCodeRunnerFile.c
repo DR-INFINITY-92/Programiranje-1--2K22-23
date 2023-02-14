@@ -1,16 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
-void kvadrat_o_p(float *O1,float *P1)
-{ 
-    float a;
-    printf("unesi stranicu a kvadrata");
-    scanf("%f",&a);
-    *O1=4*a;
-    *P1=a*a;
-}
-void main ()
+
+int osoba1(int milica)
 {
-    float O,P;
-    kvadrat_o_p(&O,&P);
-    printf("P=%f\nO=%f",P,O);
+    return 2*milica;
+}
+void osoba2(int *milica)
+{
+      *milica=2*(*milica);
+}
+
+void main()
+{
+    int a=8;
+    printf("%d\n",a);
+    // a=osoba2(a);
+    // printf("%d\n",a);
+    // osoba2(&a);
+    // printf("%d\n",a);
+    a=osoba1(a);
+    printf("%d\n",a);
 }

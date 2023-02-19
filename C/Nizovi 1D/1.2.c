@@ -5,7 +5,7 @@ void unos_niza(int n, int a[n])
     int i;
     for(i=0;i<n;i++)
     {
-        printf("unesi %d. element niza\n",i+1);
+        printf("unesi %d. elementtt niza\n",i+1);
         scanf("%d",&a[i]);
     }
 }

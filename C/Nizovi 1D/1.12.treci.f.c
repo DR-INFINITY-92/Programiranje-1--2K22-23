@@ -1,15 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
-void unos_niza_i_suma(int n, int a[n],float *s)
+void test()
 {
-    int i;
+    unos_niza_i_suma();
+}
+void unos_niza_i_suma()
+{
+    int n,i;
+    broj_elemenata_niza(&n);
+    int a[n];
+    int s=0;
     for(i=0;i<n;i++)
     {
         printf("unesi %d. element niza\n",i+1);
         scanf("%d",&a[i]);
         if(i%2==0)
-            *s=(*s)+a[i];
+            s=s+a[i];
     }
+     printf("elemenit polaznog niza su\n");
+     ispis_niza(n,a);
+     printf("suma elemnata niza sa parnim indeksom je niza je %d",s);
 }
 
 void ispis_niza(int n, int a[n])
@@ -28,12 +38,5 @@ void broj_elemenata_niza(int *n)
 }
 void main()
 {
-    int n,i;
-    float s;
-    broj_elemenata_niza(&n);
-    int a[n];
-    unos_niza_i_suma(n,a,&s);
-    printf("elemenit polaznog niza su\n");
-    ispis_niza(n,a);
-    printf("suma elemnata niza sa parnim indeksom je niza je %f",s);
+    test();
 }

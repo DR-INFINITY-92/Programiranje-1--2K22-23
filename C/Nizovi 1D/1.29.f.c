@@ -47,4 +47,5 @@ void main()
     printf("elemenit polaznog niza su\n");
     ispis_niza(n,a);
     aritmeticka_sredina_niza_sa_neparnim_indeksom(n,a);
+    printf("test");
 }

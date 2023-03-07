@@ -26,7 +26,7 @@ void broj_elemenata_niza(int *n)
 }
 void kreiranje_niza_b(int n, int a[n],int b[n])
 {
-    int i,x;
+    int i;
     b[0]=a[0];
     for(i=1;i<n;i++)
         b[i]=b[i-1]+a[i];

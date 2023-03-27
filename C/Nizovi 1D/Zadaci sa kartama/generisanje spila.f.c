@@ -25,8 +25,14 @@ void ispis_niza(int n, int a[n])
 
 void  broj_karata_u_spilu(int *n)
 { 
+    p:
     printf("unesi koliko karata zelis da ima u spilu\n");
     scanf("%d",n);
+    if(*n%2!=0)
+    {
+        printf("greska broj karata mora biti paran broj\n");
+        goto p;
+    }
 }
 
 void main()

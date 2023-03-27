@@ -31,13 +31,16 @@ void  broj_karata_u_spilu(int *n)
 }
 void podeli_karte_igracima(int n,int m,int spil[n],int igrac1k[m],int igrac2k[m])
 {
-    int i,j=0;
+    int i,j=0,y,t;
     for(i=0;i<n-1;i++)
     {
-        igrac1k[j]=spil[i];
+       igrac1k[j]=spil[i];
         igrac2k[j]=spil[i+1];
         j++;
         i++;
+        
+        
+			 
     }
 
 }
@@ -61,18 +64,12 @@ void pobednik(int m,int igrac1k[m],int igrac2k[m])
     printf("info board:\n\t");
     printf("bs1=%d bs2=%d sk1=%d sk2=%d\n\t",bs1,bs2,sk1,sk2);
     if(bs1==bs2)
-        if(sk1==sk2)
             printf("nereseno je");
-        else
-            if(sk1>sk2)
-                printf("pobednik je prvi igrac");
-            else    
-                printf("pobednij je drugi igrac");
-    else
+       
         if(bs1>bs2)
             printf("pobedio je prvi igrac");
         else    
-            printf("pobednik je drugi igrac");
+            printf("pobednij je drugi igrac");
         
 }
 
@@ -84,7 +81,7 @@ void main()
     unos_karata_spila(n,spil);
     printf("karte koje su u spilu su:\n");
     ispis_niza(n,spil);
-    int m=n/2;
+    int m=n/2;d
     int igrac1k[m],igrac2k[m];
     podeli_karte_igracima(n,m,spil,igrac1k,igrac2k);
     printf("karte prvog igraca su:\n");
@@ -96,5 +93,4 @@ void main()
   
 
 }
-
-
+o

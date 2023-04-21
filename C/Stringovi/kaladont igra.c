@@ -16,11 +16,27 @@ void strcat1(int k,int n, int o, char s[n], char t[o])
     }
 }
 int main() {
-  char s[30];
+  char s1[30],igrac_1[20],s2[30],igrac_2[20];
   int n,o,k;
-  printf("Unesite nisku:\n");
-  scanf("%s", s);
+  printf("unesi ime prvog igraca\n");
+  scanf("%s", igrac_1);
+  printf("unesi ime drugog igraca\n");
+  scanf("%s", igrac_2);
+  printf("unesi broj 1 ako 1. igra prvi, ukoliko 2. igrac igra prvi unesi broj 2");
+  scanf("%d",&red_igranja);
   printf("Unesite broj kopiranja:\n");
+  if(red_igranja==1)
+  {
+    printf("unesi rec prvog igraca\n");
+    scanf("%s", s1);
+    n=
+    win_status()
+
+  }
+  else
+  {
+
+  }
   scanf("%d",&k);
   n=strlen(s);
   o=(k*n)+(k-1);

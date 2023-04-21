@@ -23,7 +23,7 @@ int main() {
   scanf("%s", s);
   n=strlen(s);
   char t[3*n];
-strcat1(n,s,t);
+  strcat1(n,s,t);
    printf("Rezultat s=: %s\n", s);
   printf("\n Rezultat t=: %s\n", t);
 }

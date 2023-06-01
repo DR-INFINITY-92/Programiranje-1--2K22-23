@@ -37,6 +37,7 @@
   "files.associations": {
     "stdlib.h": "c",
     "TEST.C": "cpp",
-    "string.h": "c"
+    "string.h": "c",
+    "cmath": "c"
   }
 }
